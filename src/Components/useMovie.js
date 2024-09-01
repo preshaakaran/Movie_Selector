@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-const API_KEY = '9a2eb6824c1161a75e36d5a1eee940ce'; 
+const API_KEY = 'your_key'; 
 const API_URL = 'https://api.themoviedb.org/3/search/movie'; 
 
 const useMovie = (query) => {
