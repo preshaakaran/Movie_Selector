@@ -1,0 +1,176 @@
+
+.body {
+  background-image: url('C:\Users\presh\OneDrive\Desktop\React_Projects\movie-selector\public\bganim.jpg');
+  height: 80vh;
+  background-repeat: repeat;
+  background-position: 0 0;
+  animation: animatedBackground 6000s linear infinite;
+  background-size: 350px 350px;
+  color: #fff;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+@keyframes animatedBackground {
+  0% {
+      background-position: 0 0;
+  }
+  100% {
+      background-position: 50000px 0;
+  }
+}
+
+.left, .right {
+  height: 65vh;
+  display: flex;
+  background-color: #1f1f1f;
+  border-radius: 10px;
+
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+.left {
+  width: 100%;
+  max-width: 600px;
+  padding-left: 10px;
+  overflow-y: auto;
+}
+
+.right {
+  width: 100%;
+  max-width: 600px;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.hide-scrollbar {
+  overflow: scroll; 
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none; 
+}
+
+.hide-scrollbar {
+  scrollbar-width: none;
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none; 
+}
+
+.movie-list, .watched-list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+}
+
+.plist{
+  display: flex;
+  flex-direction: row;
+}
+.watched-list{
+  justify-content: space-between;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+.watched-lists{
+  padding: 10px;
+}
+
+.poster {
+  height: auto;
+  max-height: 120px;
+  width: auto;
+  max-width: 80px;
+  margin-right: 15px;
+}
+
+.posters {
+  height: auto;
+  max-height: 200px;
+  width: auto;
+  max-width: 200px;
+  margin-right: 15px;
+  position: relative;
+
+  
+}
+
+.selected-movies{
+  position: relative;
+  top: -2rem;
+
+}
+
+.flex{
+  display: flex;
+  flex-direction: row;
+
+  padding-left: 3rem;
+  padding-right: 1rem;
+  justify-content: space-around;
+}
+
+
+
+.movie-info, .watch-info {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+
+.watch-info div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.watch-info{
+  position: relative;
+  top: 2rem;
+}
+
+.shead {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  .left, .right {
+      flex-direction: column;
+      width: 100%;
+      height: auto;
+  }
+
+  .poster {
+      max-height: 100px;
+      max-width: 60px;
+  }
+
+  .shead {
+      font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .poster {
+      max-height: 80px;
+      max-width: 50px;
+  }
+
+  .movie-info h3, .watch-info h3 {
+      font-size: 1rem;
+  }
+
+  .movie-info p, .watch-info p {
+      font-size: 0.8rem;
+  }
+}
